@@ -1,0 +1,69 @@
+{% extends 'base.html'%}
+        {% block title %}
+contactUs
+        {% endblock %}
+
+{% block x %}
+<div class="fs-2 text-center">Contact <b class="txt">Us
+      <i class="fa-solid fa-phone fa-bounce"></i></i></b>
+</div>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+        {% if m %}
+        <div class="alert alert-success">YOUR MESSAGE SENT SUCCESSFULLY</div>
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-user"></i></i>
+                <input name="name" type="text" class="form-control " placeholder="name..."/>
+            </div>
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-envelope"></i></i>
+                <input name="email" type="" class="form-control " placeholder="email..."/>
+            </div>
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-phone"></i></i>
+                <input name="mob" type="text" class="form-control " placeholder="mob no..."/>
+            </div>
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-message"></i></i>
+                <textarea name="msg" class="form-control" placeholder="message..."></textarea>
+            </div>
+   <br> <input type="submit" value="Save" class="form-control bg-mycolor text-light  ">
+        </form>
+<!--        <div class="alert alert-success">-->
+<!--            Name is : {{Name}}<br>-->
+<!--            Email is : {{Email}}<br>-->
+<!--            Mobile is : {{Mobile}}<br>-->
+<!--            Message is : {{Message}}<br>-->
+<!--        </div>-->
+    </div><br>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4 bb pt-3 ps-3 ">
+<u><h5>Contact Info</h5></u>
+       <h6 class="text-danger"> <i class="fa-sharp fa-solid fa-location-dot"></i>&nbsp;&nbsp;<u>Office </u> Address</h6>
+<p class="ps-5">Plot no-44,Behind H.P<br>Petrol pump,<br>Tedhi Pulia Ring Rd,<br>Sector 5<br>Vikas nagar,Lucknow<br>Uttar Pradesh</p>
+        <h6 class="text-danger"><i class=" fa-solid fa-phone"></i>&nbsp;&nbsp;<u>Call</u>  Us </h6>
+        <p class="ps-5">+91 7607817500<br>+91 9935221176 </p>
+      <h6 class="text-danger"><i class=" fa-solid fa-message"></i>&nbsp;&nbsp;<u>Mail</u>  Us </h6>
+        <p class="ps-5">ry4114048@gmail.com<br>hr@WeHelp.in</p>
+    </div>
+    <div class="col-sm-1"></div></div>
+<div class="row">
+    <div class="col-sm-12" style="height:15px;"></div>
+</div>
+    <div class="row bb text-center" style="border:2px solid #1f766c;">
+        <p class="fs-1">Find us on <b class="txt">Google Map</b><p>
+        View us on google map easily
+    <div class="col-sm-12" ><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.219607212408!2d80.95708101433449!3d26.896524667263268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399957e86a60747d%3A0x732a4b83cc5a158e!2sTechpile%20Technology%20Private%20Limited!5e0!3m2!1sen!2sin!4v1662121290167!5m2!1sen!2sin" width="1160"height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+</div>
+
+
+</div>
+{% endblock %}
